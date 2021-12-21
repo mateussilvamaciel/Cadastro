@@ -5,101 +5,112 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-panel" style="padding:20px">
+             
+                <h2>Delete</h2>
 
-<h3>Tem certeza que deseja excluir este arquivo permanentemente?</h3>
-<div>
-    <h4>Funcionarios</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+                <h3>Tem certeza que deseja excluir este arquivo permanentemente?</h3>
+                <div>
+                    <h4>Funcionarios</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SobreNome)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SobreNome)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SobreNome)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.SobreNome)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RG)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.RG)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.RG)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.RG)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CPF)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.CPF)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Endereco)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Endereco)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Bairro)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Bairro)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Cidade)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Cidade)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UF)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.UF)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.UF)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.UF)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Departamento)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Departamento)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Departamento)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Departamento)
+                        </dd>
 
-    </dl>
+                    </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" text="Deletar" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar para lista", "Index")
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Deletar" text="Deletar" class="btn btn-primary" /> |
+                            @Html.ActionLink("Voltar para lista", "Index",null, new { @class="btn btn-default"})
+                        </div>
+                    }
+                </div>
+
+            </div>
         </div>
-    }
-</div>
+    </div>
+</section>
