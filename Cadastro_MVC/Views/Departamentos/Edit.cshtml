@@ -34,9 +34,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="hidden" id="depto" value="@Model.Departamento_ID" />
+                <input type="hidden" id="depto" value="@Model.Departamento" />
                 <select name="Departamento_ID" id="Departamento_ID" class="form-control">
-                    @{ foreach (var item in (List<Cadastro_MVC.Models.Departamento>)ViewBag.Departamentos)
+                    @{ foreach (var item in (List<Cadastro_MVC.Departamento>)ViewBag.Departamentos)
                         {
                             <option value="@item.Id">@item.Descricao</option>
                         }}
