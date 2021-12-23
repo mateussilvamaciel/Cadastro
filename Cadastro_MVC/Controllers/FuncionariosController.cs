@@ -41,6 +41,8 @@ namespace Cadastro_MVC.Controllers
         // GET: Funcionarios/Create
         public ActionResult Create()
         {
+            var lista = db.Departamento.ToList();
+            ViewBag.ListaDep = lista;
             return View();
         }
 
@@ -49,7 +51,7 @@ namespace Cadastro_MVC.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id_Func,Nome,SobreNome,Email,RG,CPF,Endereco,Bairro,Cidade,UF,Departamento_ID")] Funcionarios funcionarios)
+        public ActionResult Create([Bind(Include = "Id_Func,Nome,SobreNome,Email,RG,CPF,Endereco,Bairro,Cidade,UF,Departamento")] Funcionarios funcionarios)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +83,7 @@ namespace Cadastro_MVC.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id_Func,Nome,SobreNome,Email,RG,CPF,Endereco,Bairro,Cidade,UF,Departamento_ID")] Funcionarios funcionarios)
+        public ActionResult Edit([Bind(Include = "Id_Func,Nome,SobreNome,Email,RG,CPF,Endereco,Bairro,Cidade,UF,Departamento")] Funcionarios funcionarios)
         {
             if (ModelState.IsValid)
             {

@@ -189,6 +189,9 @@
     <Content Include="img\friends\fr-09.jpg" />
     <Content Include="img\friends\fr-10.jpg" />
     <Content Include="img\friends\fr-11.jpg" />
+    <Content Include="img\IconGitHub.png" />
+    <Content Include="img\IconLink.png" />
+    <Content Include="img\iconuni.png" />
     <Content Include="img\instagram.jpg" />
     <Content Include="img\login-bg.jpg" />
     <Content Include="img\lorde.jpg" />
